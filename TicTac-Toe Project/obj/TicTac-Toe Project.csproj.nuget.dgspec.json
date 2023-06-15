@@ -1,0 +1,68 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\jOviC\\Source\\Repos\\jovic\\Project-TicTac-Toe---jovic-barrozo\\TicTac-Toe Project\\TicTac-Toe Project.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\jOviC\\Source\\Repos\\jovic\\Project-TicTac-Toe---jovic-barrozo\\TicTac-Toe Project\\TicTac-Toe Project.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\jOviC\\Source\\Repos\\jovic\\Project-TicTac-Toe---jovic-barrozo\\TicTac-Toe Project\\TicTac-Toe Project.csproj",
+        "projectName": "TicTac-Toe Project",
+        "projectPath": "C:\\Users\\jOviC\\Source\\Repos\\jovic\\Project-TicTac-Toe---jovic-barrozo\\TicTac-Toe Project\\TicTac-Toe Project.csproj",
+        "packagesPath": "C:\\Users\\jOviC\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jOviC\\Source\\Repos\\jovic\\Project-TicTac-Toe---jovic-barrozo\\TicTac-Toe Project\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\jOviC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
