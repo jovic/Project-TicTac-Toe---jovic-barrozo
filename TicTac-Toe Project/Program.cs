@@ -13,7 +13,8 @@ namespace TicTac_Toe_Project
 
         public class Controller
         {
-            
+            _playersList = new List<GuessingGame>();
+            count = 0;
         }
 
         abstract class Player
