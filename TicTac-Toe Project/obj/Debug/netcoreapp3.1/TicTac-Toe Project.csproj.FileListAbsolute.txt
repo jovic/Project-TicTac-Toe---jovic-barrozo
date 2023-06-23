@@ -1,0 +1,5 @@
+C:\Users\jOviC\Source\Repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac-Toe Project\obj\Debug\netcoreapp3.1\TicTac-Toe Project.csproj.AssemblyReference.cache
+C:\Users\jOviC\Source\Repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac-Toe Project\obj\Debug\netcoreapp3.1\TicTac-Toe Project.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jOviC\Source\Repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac-Toe Project\obj\Debug\netcoreapp3.1\TicTac-Toe Project.AssemblyInfoInputs.cache
+C:\Users\jOviC\Source\Repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac-Toe Project\obj\Debug\netcoreapp3.1\TicTac-Toe Project.AssemblyInfo.cs
+C:\Users\jOviC\Source\Repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac-Toe Project\obj\Debug\netcoreapp3.1\TicTac-Toe Project.csproj.CoreCompileInputs.cache

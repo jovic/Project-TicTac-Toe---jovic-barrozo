@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using TicTac_Toe_Project;
 
 namespace TicTac_Toe_Project
 {
@@ -17,22 +18,50 @@ namespace TicTac_Toe_Project
             count = 0;
         }
 
-        abstract class Player
+        public class Controller(string playerName)
         {
-
-        }
-        public class HumanPlayer 
-        { 
-        
+            Name = playerName;
+            Score = 0;
         }
 
-        public class ComupterPlayer
-        {
+    public override string ToString()
+    {
+        return $"Name: {Name}, Score: {Score}.";
+    }
+    abstract class Player
+    {
 
-        }
-        static void Main(string[] args)
+    }
+    public class HumanPlayer
+    {
+
+    }
+
+    public class ComupterPlayer
+    {
+
+    }
+
+    //public class Board
+    //{
+    //    public Board(int width, int height)
+    //    {
+    //        for (int i = 0; i < height; i++)
+    //        {
+    //            Console.Write("|\t");
+    //            for (int j = 0; j < width; j++)
+    //            {
+    //                Console.WriteLine("j\t");
+    //            }
+    //            Console.WriteLine("|");
+    //        }
+    //    }
+               
+    //}
+    static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Console.WriteLine("Hello World!\t");
+            //var boardObj = new Board(7, 6);
         }
     }
 }
