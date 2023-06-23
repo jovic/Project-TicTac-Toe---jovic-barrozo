@@ -1,15 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TicTac_Toe_Project
 {
     internal class Program
     {
+        public string Name { get; set; }
+        public int Score { get; set; }
+        private static List<GuessingGame> _playersList;
+        private static int count;
+
+
         public class Controller
         {
-            public Controller() 
-            {
-
-            }
+            
         }
 
         abstract class Player
