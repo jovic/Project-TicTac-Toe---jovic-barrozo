@@ -31,6 +31,7 @@ namespace TicTac_Toe_Project
 
         public string player1Name { get; set; }
         public string player2Name { get; set; }
+        public string Winner { get; set; }
         //Initialize Board with empty values
         public FourGame()
         {
@@ -201,7 +202,8 @@ namespace TicTac_Toe_Project
                     if (CheckDiagonallyUp(row, column, type)) { return true; }
                 }
             }
-
+            if (type == PlayerToken.X) { Winner = player1Name; }
+            else { Winner = player2Name; }
             return false;
         }
 
@@ -212,7 +214,7 @@ namespace TicTac_Toe_Project
             int currentColumn = 0;
             char playerInput = '1';
 
-            Console.Write($"Player {player} {count} turn, Enter Column Number: ");
+            Console.Write($"Player {player} turn, Enter Column Number: ");
             playerInput = Console.ReadLine()[0];
             if (playerInput == '1') { currentColumn = 0; }
             else if (playerInput == '2') { currentColumn = 1; }
@@ -236,14 +238,9 @@ namespace TicTac_Toe_Project
 
         public override string ToString()
         {
-            if (HasWon(PlayerToken.X))
-            {
-                return $"Player {player1Name} has Won!";
-            }
-            else
-            {
-                return $"Player {player2Name} has Won!";
-            }
+  
+                return $"It is a Connect 4. {Winner} Wins!";
+           
         }
     }
 
@@ -283,6 +280,11 @@ namespace TicTac_Toe_Project
     {
         static void Main(string[] args)
         {
+            int choice = 1;
+            do
+            {
+
+            Console.Clear();
             Console.Write("Enter Player 1 name: ");
             string pl1=Console.ReadLine();
 
@@ -306,8 +308,12 @@ namespace TicTac_Toe_Project
                 //Console.ReadKey();
                 
             }
-
-
+            game.CreateBoard();
+            Console.WriteLine(game.ToString());
+            Console.Write("Restart? Yes(1) No(0): ");
+            choice=int.Parse(Console.ReadLine());
+            
+            } while (choice == 1);
         }
     }
 }
