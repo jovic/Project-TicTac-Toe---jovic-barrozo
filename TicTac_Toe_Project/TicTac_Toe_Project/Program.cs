@@ -27,7 +27,7 @@ namespace TicTac_Toe_Project
         public static readonly int Columns = 7;
 
         // Stores players token to the board.
-        private PlayerToken[,] Board;
+        public PlayerToken[,] Board;
 
         public string player1Name { get; set; }
         public string player2Name { get; set; }
@@ -50,9 +50,14 @@ namespace TicTac_Toe_Project
             }
         }
 
+
         // Creates complete board to the console window.
         public void CreateBoard()
         {
+            Console.Clear();
+            Console.WriteLine($"Player {player1Name} is X");
+            Console.WriteLine($"Player {player2Name} is O");
+            Console.WriteLine("\nConnect 4 Game Development Project: \n");
             for (int row = 0; row < Rows; row++)
             {
                 Console.Write(" | ");
@@ -200,6 +205,46 @@ namespace TicTac_Toe_Project
             return false;
         }
 
+        public void play(string player, int count)
+        {
+            // Get input from the user.
+            // Pressing a number 1-7 will select that column.
+            int currentColumn = 0;
+            char playerInput = '1';
+
+            Console.Write($"Player {player} {count} turn, Enter Column Number: ");
+            playerInput = Console.ReadLine()[0];
+            if (playerInput == '1') { currentColumn = 0; }
+            else if (playerInput == '2') { currentColumn = 1; }
+            else if (playerInput == '3') { currentColumn = 2; }
+            else if (playerInput == '4') { currentColumn = 3; }
+            else if (playerInput == '5') { currentColumn = 4; }
+            else if (playerInput == '6') { currentColumn = 5; }
+            else if (playerInput == '7') { currentColumn = 6; }
+            {
+                if (CanAdd(currentColumn))
+                {
+                    PlayerToken playerToken = PlayerToken.E;
+                    if (count %2 != 0) { playerToken = PlayerToken.X; }
+                    else { playerToken = PlayerToken.O; }
+
+                    Add(currentColumn, playerToken);
+                }
+            }
+
+        }
+
+        public override string ToString()
+        {
+            if (HasWon(PlayerToken.X))
+            {
+                return $"Player {player1Name} has Won!";
+            }
+            else
+            {
+                return $"Player {player2Name} has Won!";
+            }
+        }
     }
 
     public abstract class Controller : FourGame
@@ -217,6 +262,8 @@ namespace TicTac_Toe_Project
                 Add(playermove, playerToken);
         }
 
+        
+      
         public override string ToString()
         {
             return $"Name: {playerName}";
@@ -236,13 +283,29 @@ namespace TicTac_Toe_Project
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter Player 1 name: ");
+            Console.Write("Enter Player 1 name: ");
             string pl1=Console.ReadLine();
 
-            Console.WriteLine("Enter Player 2 name: ");
+            Console.Write("Enter Player 2 name: ");
             string pl2 = Console.ReadLine();
 
             FourGame game = new FourGame();
+
+            game.player1Name=pl1;
+            game.player2Name=pl2;
+
+            int ctr = 1;
+            while (!game.HasWon(PlayerToken.X) && !game.HasWon(PlayerToken.O) && !game.IsFull())
+            {
+                
+                game.CreateBoard();
+                if (ctr % 2 != 0) { game.play(pl1, ctr); }
+                else { game.play(pl2, ctr); }
+                ++ctr;
+                Console.Clear();
+                //Console.ReadKey();
+                
+            }
 
 
         }
