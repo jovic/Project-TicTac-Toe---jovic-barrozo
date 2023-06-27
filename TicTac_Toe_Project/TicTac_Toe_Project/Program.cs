@@ -257,6 +257,7 @@ namespace TicTac_Toe_Project
             if (CanAdd(playermove))
                 Add(playermove, playerToken);
         }
+
       
         public override string ToString()
         {
@@ -266,7 +267,7 @@ namespace TicTac_Toe_Project
 
     public class Players
     {
-        public FourGame game { get; set; }
+        public FourGame game;
         public Players(string player1Name, string player2Name)
         {
             game.player1Name = player1Name;
@@ -291,7 +292,8 @@ namespace TicTac_Toe_Project
 
             FourGame game = new FourGame();
 
-            Players setPlayers = new Players(pl1, pl2);
+            game.player1Name=pl1;
+            game.player2Name=pl2;
 
             int ctr = 1;
             while (!game.HasWon(PlayerToken.X) && !game.HasWon(PlayerToken.O) && !game.IsFull())
