@@ -27,7 +27,7 @@ namespace TicTac_Toe_Project
         public static readonly int Columns = 7;
 
         // Stores players token to the board.
-        public PlayerToken[,] Board;
+        private PlayerToken[,] Board;
 
         public string player1Name { get; set; }
         public string player2Name { get; set; }
@@ -192,19 +192,20 @@ namespace TicTac_Toe_Project
         public bool HasWon(PlayerToken type)
         {
             // Use the Check methods created above if the player has won.
+            bool isPlayerWins = false;
             for (int row = 0; row < Rows; row++)
             {
                 for (int column = 0; column < Columns; column++)
                 {
-                    if (CheckVertically(row, column, type)) { return true; }
-                    if (CheckHorizontally(row, column, type)) { return true; }
-                    if (CheckDiagonallyDown(row, column, type)) { return true; }
-                    if (CheckDiagonallyUp(row, column, type)) { return true; }
+                    if (CheckVertically(row, column, type)) { isPlayerWins=true; }
+                    if (CheckHorizontally(row, column, type)) { isPlayerWins=true; }
+                    if (CheckDiagonallyDown(row, column, type)) { isPlayerWins=true; }
+                    if (CheckDiagonallyUp(row, column, type)) { isPlayerWins=true; }
                 }
             }
             if (type == PlayerToken.X) { Winner = player1Name; }
             else { Winner = player2Name; }
-            return false;
+            return isPlayerWins;
         }
 
         public void play(string player, int count)
@@ -267,12 +268,13 @@ namespace TicTac_Toe_Project
         }
     }
 
-    public class Player
+    public class Players
     {
         public FourGame game;
-        public Player(string playerName)
+        public Players(string player1Name, string player2Name)
         {
-            game.player1Name = playerName;
+            game.player1Name = player1Name;
+            game.player2Name = player2Name;
         }
     }
 
@@ -303,7 +305,7 @@ namespace TicTac_Toe_Project
                 game.CreateBoard();
                 if (ctr % 2 != 0) { game.play(pl1, ctr); }
                 else { game.play(pl2, ctr); }
-                ++ctr;
+                ctr++;
                 Console.Clear();
                 //Console.ReadKey();
                 
