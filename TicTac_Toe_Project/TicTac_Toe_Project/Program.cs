@@ -29,6 +29,8 @@ namespace TicTac_Toe_Project
         // Stores players token to the board.
         private PlayerToken[,] Board;
 
+        public string player1Name { get; set; }
+        public string player2Name { get; set; }
         //Initialize Board with empty values
         public FourGame()
         {
@@ -81,15 +83,14 @@ namespace TicTac_Toe_Project
             }
             Console.WriteLine("\n");
         }
-         
+
         /// Adds the given token to the column given.
         public void Add(int column, PlayerToken playerToken)
         {
             // If it is full, give up.
             if (!CanAdd(column)) { return; }
 
-            // Starting at the top, look down to see how far down gravity will
-            // pull it.
+            // Starting at the top, look down to see how far down gravity will pull it.
             int currentRow = 0;
             while (currentRow < Rows - 1 &&
                 Board[currentRow + 1, column] == PlayerToken.E)
@@ -150,11 +151,58 @@ namespace TicTac_Toe_Project
             return true;
         }
 
+        // Check vertically up if player wins
+        private bool CheckVertically(int row, int column, PlayerToken type)
+        {
+            // If there aren't even four more spots before leaving the grid,
+            // we know it can't be.
+            if (row + 3 >= Rows) { return false; }
 
+            for (int distance = 0; distance < 4; distance++)
+            {
+                if (Board[row + distance, column] != type) { return false; }
+            }
+
+            return true;
+        }
+
+        // Check horizontally if player wins
+        private bool CheckHorizontally(int row, int column, PlayerToken type)
+        {
+            // If there aren't even four more spots before leaving the grid,
+            // we know it can't be.
+            if (column + 3 >= Columns) { return false; }
+
+            for (int distance = 0; distance < 4; distance++)
+            {
+                if (Board[row, column + distance] != type) { return false; }
+            }
+
+            return true;
+        }
+
+        // Figures out if a particular player, identified by that player's token type, has won the game yet.
+
+        public bool HasWon(PlayerToken type)
+        {
+            // Use the Check methods created above if the player has won.
+            for (int row = 0; row < Rows; row++)
+            {
+                for (int column = 0; column < Columns; column++)
+                {
+                    if (CheckVertically(row, column, type)) { return true; }
+                    if (CheckHorizontally(row, column, type)) { return true; }
+                    if (CheckDiagonallyDown(row, column, type)) { return true; }
+                    if (CheckDiagonallyUp(row, column, type)) { return true; }
+                }
+            }
+
+            return false;
+        }
 
     }
 
-    public abstract class Controller:FourGame
+    public abstract class Controller : FourGame
     {
         public int Score { get; set; }
         public string playerName { get; set; }
@@ -175,5 +223,29 @@ namespace TicTac_Toe_Project
         }
     }
 
+    public class Player
+    {
+        public FourGame game;
+        public Player(string playerName)
+        {
+            game.player1Name = playerName;
+        }
+    }
+
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Player 1 name: ");
+            string pl1=Console.ReadLine();
+
+            Console.WriteLine("Enter Player 2 name: ");
+            string pl2 = Console.ReadLine();
+
+            FourGame game = new FourGame();
+
+
+        }
+    }
 }
 

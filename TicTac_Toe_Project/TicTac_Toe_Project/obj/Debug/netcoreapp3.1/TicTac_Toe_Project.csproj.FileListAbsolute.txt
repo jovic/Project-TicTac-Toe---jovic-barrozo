@@ -12,3 +12,17 @@ C:\Users\jOviC\source\repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_
 C:\Users\jOviC\source\repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.dll
 C:\Users\jOviC\source\repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.pdb
 C:\Users\jOviC\source\repos\jovic\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.genruntimeconfig.cache
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\bin\Debug\netcoreapp3.1\TicTac_Toe_Project.exe
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\bin\Debug\netcoreapp3.1\TicTac_Toe_Project.deps.json
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\bin\Debug\netcoreapp3.1\TicTac_Toe_Project.runtimeconfig.json
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\bin\Debug\netcoreapp3.1\TicTac_Toe_Project.runtimeconfig.dev.json
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\bin\Debug\netcoreapp3.1\TicTac_Toe_Project.dll
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\bin\Debug\netcoreapp3.1\TicTac_Toe_Project.pdb
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.csproj.AssemblyReference.cache
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.AssemblyInfoInputs.cache
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.AssemblyInfo.cs
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.csproj.CoreCompileInputs.cache
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.dll
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.pdb
+D:\Documents\GitHub\Project-TicTac-Toe---jovic-barrozo\TicTac_Toe_Project\TicTac_Toe_Project\obj\Debug\netcoreapp3.1\TicTac_Toe_Project.genruntimeconfig.cache
