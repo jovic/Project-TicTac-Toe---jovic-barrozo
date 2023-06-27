@@ -239,9 +239,7 @@ namespace TicTac_Toe_Project
 
         public override string ToString()
         {
-  
-                return $"It is a Connect 4. {Winner} Wins!";
-           
+            return $"It is a Connect 4. {Winner} Wins!";  
         }
     }
 
@@ -259,8 +257,6 @@ namespace TicTac_Toe_Project
             if (CanAdd(playermove))
                 Add(playermove, playerToken);
         }
-
-        
       
         public override string ToString()
         {
@@ -270,7 +266,7 @@ namespace TicTac_Toe_Project
 
     public class Players
     {
-        public FourGame game;
+        public FourGame game { get; set; }
         public Players(string player1Name, string player2Name)
         {
             game.player1Name = player1Name;
@@ -295,20 +291,22 @@ namespace TicTac_Toe_Project
 
             FourGame game = new FourGame();
 
-            game.player1Name=pl1;
-            game.player2Name=pl2;
+            Players setPlayers = new Players(pl1, pl2);
 
             int ctr = 1;
             while (!game.HasWon(PlayerToken.X) && !game.HasWon(PlayerToken.O) && !game.IsFull())
             {
-                
                 game.CreateBoard();
-                if (ctr % 2 != 0) { game.play(pl1, ctr); }
-                else { game.play(pl2, ctr); }
-                ctr++;
-                Console.Clear();
-                //Console.ReadKey();
-                
+                if (ctr % 2 != 0) 
+                    { 
+                        game.play(pl1, ctr); 
+                    }
+                else 
+                    { 
+                        game.play(pl2, ctr); 
+                    }
+                ++ctr;
+                Console.Clear();                
             }
             game.CreateBoard();
             Console.WriteLine(game.ToString());
